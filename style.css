@@ -90,11 +90,14 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 2px solid #ff385c;
   padding: 10px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 form label {
@@ -105,7 +108,6 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 65%;
-  float: right;
 }
 
 form button {
@@ -133,24 +135,41 @@ footer p {
 
 @media all and (min-width: 600px) {
   header {
+    background-color: #ff385c;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0 0 0 10px;
-    font-size: 14px;
   }
 
-  .logo {
-    font-size: 40px;
+  header nav {
+    padding: 10px;
   }
 
   form {
+    display: flex;
     flex-direction: row;
+    font-size: 10px;
   }
 
   .group {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-flow: row nowrap;
     align-items: center;
+  }
+
+  .rental .item {
+    display: flex block;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100px;
+  }
+
+  form button {
+    font-size: 20px;
+    padding: auto;
+    width: auto
   }
 
   .item label
@@ -173,3 +192,4 @@ footer p {
     flex: 1;
     flex-direction: row;
   }
+}
